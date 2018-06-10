@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -80,10 +81,10 @@ var read_key = 'Z07EIW7J2H7EH0T4';
 var channel = '500626';
 
 // url buscar os dados que estao salvos no banco, tanto field1 e field2
-var read_url = 'https://api.thingspeak.com/channels/'500626'/feeds.json?api_key='ZJNAXEBEVY8XK2J9'&results=1'
+var read_url = 'https://api.thingspeak.com/channels/'+channel+'/feeds.json?api_key='+read_key+'&results=1'
 
 // url para alterar o field1 no banco
-var write_url = 'https://api.thingspeak.com/update?api_key='Z07EIW7J2H7EH0T4'&field1='; // add valor no final
+var write_url = 'https://api.thingspeak.com/update?api_key='+write_key+'&field1='; // add valor no final
 
 
 // acessando o botão HTML e elemento HTML contador
@@ -114,7 +115,10 @@ function update(){
 // funcao que modifica o valor do field 1 no thingspeak quando o botao é clicado
 button.click(function(){
     // inverte o valor do status
-    window.alert("BOTÃO DE EMERGÊNCIA ACIONADO!!!");
+    status = status ? 0 : 1;  
+    // envia para o thingspeak
+    $.get( write_url+status+"&field2="+value,function(){
+      update();
     });
 })
 
@@ -124,6 +128,7 @@ update()
 
 // atualizar em 5 em 5 segundos
 setInterval(function(){update()},5000)
+
 
 
 
