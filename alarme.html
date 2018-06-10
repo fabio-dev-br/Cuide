@@ -14,18 +14,17 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="w3-bar-item w3-right"> <img style=" width: 50%; height: 100%;"   src="C:\Users\fabio\Documents\Cuide\imagens\LOGO FINAL SIDE.svg" align="right" ></a>
-			</span>
+  <span class="w3-bar-item w3-right"><img style=" width: 50%; height: 100%;"   src="C:\Users\fabio\Documents\Cuide\imagens\LOGO FINAL SIDE.svg" align="right" ></span>
 </div>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;padding-top:100px" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+      <img src="C:\Users\fabio\Documents\Cuide\imagens\pp.jpg" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span>Welcome, <strong>Mike</strong></span><br>
+      <span>Bem Vindo, <strong>Ana</strong></span><br>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
@@ -33,7 +32,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr>
   <div class="w3-container">
-    <h5>Dashboard</h5>
+    <h5>Central de Controle</h5>
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
@@ -41,11 +40,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+    <a href="appcuide.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+    <a href="appcuide.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
     <a href="appcuide.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
     <a href="appcuide.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-    <a href="appcuide.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
   </div>
 </nav>
 
@@ -54,39 +53,81 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:700px;margin-top:43px;">
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
   <!-- Header -->
-  <header class="w3-container" style="padding-top:50px">
-    <h5><b><i class="fa fa-dashboard"></i> MEU CUID-E</b></h5>
-    <a href="appcuide.html" class="w3-bar-item w3-button w3-padding w3-blue"  style="margin-left:200px;padding-top:22px" ><i class="fa fa-home"></i>  HOME</a>
-  </header>
+  <header class="w3-container" style="padding-top:100px">
+    <h5><b><i class="fa fa-bell-o"></i> Criar Despertador</b></h5>
+    <form name="contador">
+<input name="segundos" type="text" />
+</form>
+<p id="demo"></p>
 
-
-  
-  <br>
-  <div class="w3-container w3-dark-grey w3-padding-32">
-    <div class="w3-row">
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Dados de Batimento cardiaco</h5>
-        
-
-<iframe  style="width: 350px; height: 300px ;border: 4px solid #cccccc;" src="https://thingspeak.com/channels/500626/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-
-      </div>
-      
-    </div>
+<div class="round-button">
+  <div class="round-button-circle">
+    <a href="#" class="round-button" id="btn">-</a>
   </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    
-  </footer>
-
-  <!-- End page content -->
 </div>
 
-<script>
+<h3> Valor: <span id="counter"></span></h3>
+  </header>
+
+  
+  <script type="text/javascript">
+
+var write_key = 'ZJNAXEBEVY8XK2J9';
+var read_key = 'Z07EIW7J2H7EH0T4';
+var channel = '500626';
+
+// url buscar os dados que estao salvos no banco, tanto field1 e field2
+var read_url = 'https://api.thingspeak.com/channels/'500626'/feeds.json?api_key='ZJNAXEBEVY8XK2J9'&results=1'
+
+// url para alterar o field1 no banco
+var write_url = 'https://api.thingspeak.com/update?api_key='Z07EIW7J2H7EH0T4'&field1='; // add valor no final
+
+
+// acessando o botão HTML e elemento HTML contador
+var counter = $("#counter");
+var button = $("#btn");
+var up = $("#update");
+var status = 0;
+var value = 0;
+
+// funcao que atualiza os depois de 500 ms
+function update(){
+      // atualiza o status do led e contador
+     $.get( read_url,  function(data){          
+          status = parseInt(data['feeds'][0]['field1']);
+          value = parseInt(data['feeds'][0]['field2']);
+          // atualiza contator
+          counter.html(value);
+          // atualiza situação do led
+          if(status){
+                button.html("Ligado");
+            }else{
+                button.html("Desligado");
+            }
+        });
+}
+
+
+// funcao que modifica o valor do field 1 no thingspeak quando o botao é clicado
+button.click(function(){
+    // inverte o valor do status
+    window.alert("BOTÃO DE EMERGÊNCIA ACIONADO!!!");
+    });
+})
+
+// quando clicar no botão atualizar
+update()
+
+
+// atualizar em 5 em 5 segundos
+setInterval(function(){update()},5000)
+
+
+
+
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");
 
